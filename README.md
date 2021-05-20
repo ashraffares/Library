@@ -2,8 +2,8 @@
 ![cover]()
 
 
-this is an e-commerce site with only two pages the main page and search page it's basically an instruments shop.
-d Awad
+## Library
+
 
 ## Built With
 
@@ -43,7 +43,7 @@ Linters
 
 
 To get a local copy up and running follow these simple example steps.
-- Clone this repository with: git clone ```https://github.com/ashraffares/week4pro.git``` using your terminal or command line.
+- Clone this repository with: git clone ```https://github.com/ashraffares/Library.git``` using your terminal or command line.
 - Change to the project directory by entering : <br>
 ```cd NYTproject``` in the terminal .
 
