@@ -21,4 +21,7 @@ let button = document.getElementById('submitform').onclick = function(){
         var add = JSON.parse(localStorage.getItem('data'));
         add.push(bk);
         localStorage.setItem('data', JSON.stringify(add));
+        window.open('./show.html','_blank')
 }
+
+
