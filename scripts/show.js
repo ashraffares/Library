@@ -1,18 +1,18 @@
 list = JSON.parse(localStorage.getItem('data'));
-function destroy_book(index){
-    list.splice(index,1);
-    localStorage.setItem('data',JSON.stringify(list))
+function destroy_book(index) {
+    list.splice(index, 1);
+    localStorage.setItem('data', JSON.stringify(list))
     document.location.reload()
 }
 
-function status(index){
-    
-    if(list[index].read == 'Not read yet'){
+function status(index) {
+
+    if (list[index].read == 'Not read yet') {
         list[index].read = 'read it'
-    }else{
+    } else {
         list[index].read = 'Not read yet';
     }
-    localStorage.setItem('data',JSON.stringify(list))
+    localStorage.setItem('data', JSON.stringify(list))
     document.location.reload()
 }
 
