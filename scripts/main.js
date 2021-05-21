@@ -9,7 +9,7 @@ function Book(title, author, pages, read) {
   this.read = read;
 }
 document.getElementById('submitform').onclick = () => {
-    const bk = new Book(
+  const bk = new Book(
     document.getElementById('title').value,
     document.getElementById('author').value,
     document.getElementById('pages').value,

@@ -15,18 +15,18 @@ function status(index) {
   document.location.reload();
 }
 
-let len = list.length;
+const len = list.length;
 for (let i = 0; i < len; i += i) {
   const tr = document.createElement('tr');
-  let addBook = document.getElementById('table_body');
+  const addBook = document.getElementById('table_body');
   const td = `
     <td>${[i]}</td>
     <td>${list[i].title}</td>
     <td>${list[i].author}</td>
     <td>${list[i].pages}</td>
     <td>${list[i].read}</td>
-    <td><button onclick="status(${[i,]})" class="btn btn-sm btn-success">status</button></td>
-    <td><button onclick="destroyBook(${[i,]})" class="btn btn-sm btn-danger">delete</button></td>`;
+    <td><button onclick="status(${[i]})" class="btn btn-sm btn-success">status</button></td>
+    <td><button onclick="destroyBook(${[i]})" class="btn btn-sm btn-danger">delete</button></td>`;
 
   tr.innerHTML = td;
   addBook.appendChild(tr);
