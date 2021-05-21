@@ -8,10 +8,7 @@ function Book(title,author,pages,read){
         this.pages = pages;
         this.read = read;
 }
-
-
-let button = document.getElementById('submitform').onclick = function(){
-    
+let button = document.getElementById('submitform').onclick = function(){  
     const bk = new Book(
         document.getElementById('title').value,
         document.getElementById('author').value,
@@ -23,5 +20,3 @@ let button = document.getElementById('submitform').onclick = function(){
         localStorage.setItem('data', JSON.stringify(add));
         window.open('./show.html','_blank')
 }
-
-
