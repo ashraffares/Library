@@ -1,10 +1,11 @@
 const list = JSON.parse(localStorage.getItem('data'));
+/* eslint-disable */ 
 function destroyBook(index) {
   list.splice(index, 1);
   localStorage.setItem('data', JSON.stringify(list));
   document.location.reload();
 }
-/* eslint-disable */ 
+
 function status(index) {
   if (list[index].read === 'Not read yet') {
     list[index].read = 'read it';
