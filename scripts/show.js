@@ -1,5 +1,5 @@
-list = JSON.parse(localStorage.getItem('data'));
-function destroy_book(index) {
+let list = JSON.parse(localStorage.getItem('data'));
+function destroyBook(index) {
   list.splice(index, 1);
   localStorage.setItem('data', JSON.stringify(list));
   document.location.reload();
@@ -28,7 +28,7 @@ for (let i = 0; i < len; i++) {
     <td><button onclick="status(${[
       i,
     ]})" class="btn btn-sm btn-success">status</button></td>
-    <td><button onclick="destroy_book(${[
+    <td><button onclick="destroyBook(${[
       i,
     ]})" class="btn btn-sm btn-danger">delete</button></td>
     
