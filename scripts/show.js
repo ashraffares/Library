@@ -1,4 +1,4 @@
-let list = JSON.parse(localStorage.getItem('data'));
+const list = JSON.parse(localStorage.getItem('data'));
 function destroyBook(index) {
   list.splice(index, 1);
   localStorage.setItem('data', JSON.stringify(list));
@@ -6,7 +6,7 @@ function destroyBook(index) {
 }
 
 function status(index) {
-  if (list[index].read == 'Not read yet') {
+  if (list[index].read === 'Not read yet') {
     list[index].read = 'read it';
   } else {
     list[index].read = 'Not read yet';
@@ -16,24 +16,18 @@ function status(index) {
 }
 
 let len = list.length;
-for (let i = 0; i < len; i++) {
-  let tr = document.createElement('tr');
-  let add_book = document.getElementById('table_body');
+for (let i = 0; i < len; i += i) {
+  const tr = document.createElement('tr');
+  let addBook = document.getElementById('table_body');
   const td = `
     <td>${[i]}</td>
     <td>${list[i].title}</td>
     <td>${list[i].author}</td>
     <td>${list[i].pages}</td>
     <td>${list[i].read}</td>
-    <td><button onclick="status(${[
-      i,
-    ]})" class="btn btn-sm btn-success">status</button></td>
-    <td><button onclick="destroyBook(${[
-      i,
-    ]})" class="btn btn-sm btn-danger">delete</button></td>
-    
-    `;
+    <td><button onclick="status(${[i,]})" class="btn btn-sm btn-success">status</button></td>
+    <td><button onclick="destroyBook(${[i,]})" class="btn btn-sm btn-danger">delete</button></td>`;
 
   tr.innerHTML = td;
-  add_book.appendChild(tr);
+  addBook.appendChild(tr);
 }
