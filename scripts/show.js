@@ -22,12 +22,14 @@ for (let i = 0; i < len; i++) {
     let tr = document.createElement('tr')
     let add_book = document.getElementById('table_body');
     const td = `
-    <th scope="col">${[i]}</th>
-    <th scope="col">${list[i].title}</th>
-    <th scope="col">${list[i].author}</th>
-    <th scope="col">${list[i].pages}</th>
-    <th scope="col" onclick="status(${[i]})">${list[i].read}</th>
-    <th scope="col"><button onclick="destroy_book(${[i]})" class="btn btn-danger id="delete">delete</button></th>
+    <td>${[i]}</td>
+    <td>${list[i].title}</td>
+    <td>${list[i].author}</td>
+    <td>${list[i].pages}</td>
+    <td )">${list[i].read}</td>
+    <td><button onclick="status(${[i]})" class="btn btn-sm btn-success">status</button></td>
+    <td><button onclick="destroy_book(${[i]})" class="btn btn-sm btn-danger">delete</button></td>
+    
     `;
 
     tr.innerHTML = td;
