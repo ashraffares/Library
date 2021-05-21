@@ -8,7 +8,7 @@ function Book(title, author, pages, read) {
   this.pages = pages;
   this.read = read;
 }
-let button = (document.getElementById('submitform').onclick;
+let button = document.getElementById('submitform').onclick;
 button = () => {
   const bk = new Book(
     document.getElementById('title').value,
@@ -20,4 +20,4 @@ button = () => {
   add.push(bk);
   localStorage.setItem('data', JSON.stringify(add));
   window.open('./show.html', '_self');
-});
+};
