@@ -1,6 +1,6 @@
-list =JSON.parse(localStorage.getItem('data'));
+list = JSON.parse(localStorage.getItem('data'));
 let len = list.length;
-for(let i = 0; i < len; i++){
+for (let i = 0; i < len; i++) {
     let tr = document.createElement('tr')
     let add_book = document.getElementById('table_body');
     const td = `
