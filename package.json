@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "node ./scripts/main.js",
-    "lint": "eslint ./scripts/main.js"
+    "lint": "eslint ./scripts --ext .js"
 
   },
   "devDependencies": {
