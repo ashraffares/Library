@@ -27,7 +27,6 @@ const Book = (function(){
         setTimeout(
           function() {
             document.getElementById('msg').style.display = 'none'
-            console.log("it entered here");
           }, 2500);
       }
 
