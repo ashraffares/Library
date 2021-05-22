@@ -27,12 +27,12 @@
       </ul>
     </div>
   </nav>
-  <div id="msg" class="d-none">
+  <div id="msg" style="display:none;">
     <div class="alert alert-success" role="alert">
       <p id="sayMsg"></p>
     </div>
   </div>
-  <form class="container mt-5 bg-light p-4 border rounded">
+  <form class="container mt-5 bg-light p-4 border rounded" id="form">
     <h3 class="bg-primary text-white font-weight-bolder">New book</h3>
     <div class="form-group">
       <input type="text" class="form-control" id="title" placeholder="Title" minlength="3" maxlength="30" required>
@@ -49,7 +49,7 @@
       <option value="read it">read it</option>
     </select>
     <div class="form-group mt-2">
-      <butto id="submitform" class="btn btn-primary">Create book</button>
+      <button class="btn btn-primary">Create book</button>
     </div>
   </form>
   <!-- Optional JavaScript -->
