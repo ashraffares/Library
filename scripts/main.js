@@ -106,5 +106,5 @@ if (form != null) {
 
 const table = document.getElementById('table')
 if (table != null) {
-    Book.allBooks()
+  Book.allBooks();
 }
