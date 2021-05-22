@@ -31,15 +31,15 @@
   <form class="container mt-5 bg-light p-4 border rounded">
     <h3 class="bg-primary text-white font-weight-bolder">New book</h3>
     <div class="form-group">
-      <input type="text" class="form-control" id="title" placeholder="Title">
+      <input type="text" class="form-control" id="title" placeholder="Title" minlength="3" maxlength="30" required>
     </div>
     <div class="form-group">
-      <input type="text" class="form-control" id="author" placeholder="Author">
+      <input type="text" class="form-control" id="author" placeholder="Author" minlength="3" maxlength="30" required>
     </div>
     <div class="form-group">
-      <input type="number" class="form-control" id="pages" placeholder="Number of pages">
+      <input type="number" class="form-control" id="pages" placeholder="Number of pages" min="1" max='5000' required>
     </div>
-    <select class="form-control form-control-sm" id="read">
+    <select class="form-control form-control-sm" id="read" required>
       <option disabled selected value>Select an option</option>
       <option value="Not read yet">Not read yet</option>
       <option value="read it">read it</option>
