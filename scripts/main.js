@@ -16,7 +16,7 @@ const Book = (function () {
   };
 
   const clearForm = function () {
-    const form = document.querySelector("#form");
+    const form = document.querySelector('#form');
     form.querySelector('#title').value = '';
     form.querySelector('#author').value = '';
     form.querySelector('#pages').value = '';
@@ -24,8 +24,8 @@ const Book = (function () {
 
   const msg = function (message) {
     document.getElementById('msg').style.display = 'block';
-    document.getElementById("sayMsg").innerHTML = message;
-    setTimeout(function () {
+    document.getElementById('sayMsg').innerHTML = message;
+    setTimeout(() => {
       document.getElementById('msg').style.display = 'none';
     }, 2500);
   };
@@ -53,7 +53,7 @@ const Book = (function () {
   const allBooks = function () {
     const listData = JSON.parse(localStorage.getItem('data'));
     const len = listData.length;
-    for (let i = 0; i < len; i++) {
+    for (let i = 0; i < len; i += i) {
       const tr = document.createElement('tr');
       const addBook = document.getElementById('table_body');
       const td = `
@@ -79,7 +79,7 @@ const Book = (function () {
   const status = function (index) {
     const list = JSON.parse(localStorage.getItem('data'));
     if (list[index].read === 'Not read yet') {
-      list[index].read = "read it";
+      list[index].read = 'read it';
     } else {
       list[index].read = 'Not read yet';
     }
