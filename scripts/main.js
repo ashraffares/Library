@@ -1,5 +1,5 @@
 const Book = (() => {
-  "user strict";
+  'user strict';
 
   function Book(title, author, pages, read) {
     return {
@@ -26,7 +26,7 @@ const Book = (() => {
 
   const msg = (message) => {
     document.getElementById('msg').style.display = 'block';
-    document.getElementById("sayMsg").innerHTML = message;
+    document.getElementById('sayMsg').innerHTML = message;
     setTimeout(() => {
       document.getElementById('msg').style.display = 'none';
     }, 2500);
@@ -55,7 +55,7 @@ const Book = (() => {
   const allBooks = () => {
     const listData = JSON.parse(localStorage.getItem('data'));
     const len = listData.length;
-    for (let i = 0; i < len; i = i + 1) {
+    for (let i = 0; i < len; i += i) {
       const tr = document.createElement('tr');
       const addBook = document.getElementById('table_body');
       const td = `
