@@ -10,7 +10,7 @@ const Book = (() => {
       this.read = read;
     }
   }
-  
+
   const setData = () => {
     const data = localStorage.getItem('data');
     if (data == null) {
