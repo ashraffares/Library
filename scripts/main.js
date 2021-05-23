@@ -1,4 +1,4 @@
-const Book = (function () {
+const Book = (() => {
   'user strict';
 
   function Book(title, author, pages, read) {
@@ -8,21 +8,21 @@ const Book = (function () {
     this.read = read;
   }
 
-  const setData = function () {
+  const setData = () => {
     const data = localStorage.getItem('data');
     if (data == null) {
       localStorage.setItem('data', '[]');
     }
   };
 
-  const clearForm = function () {
+  const clearForm = () => {
     const form = document.querySelector('#form');
     form.querySelector('#title').value = '';
     form.querySelector('#author').value = '';
     form.querySelector('#pages').value = '';
   };
 
-  const msg = function (message) {
+  const msg = (message) => {
     document.getElementById('msg').style.display = 'block';
     document.getElementById('sayMsg').innerHTML = message;
     setTimeout(() => {
@@ -30,7 +30,7 @@ const Book = (function () {
     }, 2500);
   };
 
-  const getFormData = function () {
+  const getFormData = () => {
     setData();
     const form = document.querySelector('#form');
     const title = form.querySelector('#title').value;
@@ -43,14 +43,14 @@ const Book = (function () {
     return book;
   };
 
-  const saveBook = function () {
+  const saveBook = () => {
     const formData = getFormData();
     const getdata = JSON.parse(localStorage.getItem('data'));
     getdata.push(formData);
     localStorage.setItem('data', JSON.stringify(getdata));
   };
 
-  const allBooks = function () {
+  const allBooks = () => {
     const listData = JSON.parse(localStorage.getItem('data'));
     const len = listData.length;
     for (let i = 0; i < len; i += i) {
@@ -69,14 +69,14 @@ const Book = (function () {
     }
   };
 
-  const destroyBook = function (index) {
+  const destroyBook = (index) => {
     const list = JSON.parse(localStorage.getItem('data'));
     list.splice(index, 1);
     localStorage.setItem('data', JSON.stringify(list));
     document.location.reload();
   };
 
-  const status = function (index) {
+  const status = (index) => {
     const list = JSON.parse(localStorage.getItem('data'));
     if (list[index].read === 'Not read yet') {
       list[index].read = 'read it';
