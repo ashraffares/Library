@@ -2,10 +2,12 @@ const Book = (() => {
   'user strict';
 
   function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+      return {
+          title,
+          author,
+          pages,
+          read
+      }
   }
 
   const setData = () => {
@@ -53,7 +55,7 @@ const Book = (() => {
   const allBooks = () => {
     const listData = JSON.parse(localStorage.getItem('data'));
     const len = listData.length;
-    for (let i = 0; i < len; i += i) {
+    for (let i = 0; i < len; i++) {
       const tr = document.createElement('tr');
       const addBook = document.getElementById('table_body');
       const td = `
