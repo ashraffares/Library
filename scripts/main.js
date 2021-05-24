@@ -1,20 +1,19 @@
+class BookObj {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+}
 
 const Book = (() => {
   'user strict';
 
-  class BookObj {
-    constructor(title, author, pages, read) {
-      this.title = title;
-      this.author = author;
-      this.pages = pages;
-      this.read = read;
-    }
-  }
-
   const setData = () => {
     const data = localStorage.getItem('data');
     if (data == null) {
-      localStorage.setItem('data', '[]');
+      localStorage.setItem('data', JSON.stringify([]));
     }
   };
 
@@ -54,7 +53,7 @@ const Book = (() => {
   };
 
   const allBooks = () => {
-    const listData = JSON.parse(localStorage.getItem('data'));
+    const listData = JSON.parse(localStorage.getItem('data'));[{},{}]
     const len = listData.length;
     for (let i = 0; i < len; i += 1) {
       const tr = document.createElement('tr');
