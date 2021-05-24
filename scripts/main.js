@@ -53,7 +53,7 @@ const Book = (() => {
   };
 
   const allBooks = () => {
-    const listData = JSON.parse(localStorage.getItem('data'));[{},{}]
+    const listData = JSON.parse(localStorage.getItem('data'));
     const len = listData.length;
     for (let i = 0; i < len; i += 1) {
       const tr = document.createElement('tr');
